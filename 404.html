@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en-SG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Floral Charm · Handmade bouquets, Singapore</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Preserved, soap and fresh-flower bouquets handmade to order in Geylang Bahru, Singapore. 4.92★ from 377 Carousell reviews. Urgent delivery within 2 hours. WhatsApp +65 8494 1446.">
+<meta name="theme-color" content="#FBF6F3">
+<link rel="icon" href="assets/fc-favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/v-pink-dome.jpg">
+<!--
+  Floral Charm website v3 · photo-first scroll story.
+  Libraries (free, pinned): GSAP 3.12.5 + ScrollTrigger (no-charge licence) · Lenis 1.1.13 (MIT, desktop only).
+  Every photo and video loop is real Floral Charm footage (studio photos and our Instagram reels). No AI images, no people.
+  Sharpness: photos are 1080px+ (lanczos + light unsharp), videos 720p H.264, nothing is scaled up as a bitmap. Reviews are quoted as written from carousell.sg/u/floralcharm (collected 6 Nov 2026).
+  Motion: transform + opacity only. Reduced-motion, ?flat or no-JS = the same page, still.
+-->
+<style>
+:root{
+  --bg:#FBF6F3;--paper:#FFFCFA;--blush:#F6E7EA;--wine:#602B39;--wine-d:#4A1F2B;--rose:#A8467A;--rose-l:#F3DCE7;
+  --ink:#2B2230;--ink-2:#4F4352;--muted:#6F6275;--line:rgba(43,34,48,.12);--gold:#B08A55;--wa:#1D8F4E;--wa-d:#157540;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:"Jost",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --pad:20px;--hdr:66px;--r:26px;--arch:999px 999px 26px 26px;--ease:cubic-bezier(.22,1,.36,1);
+  --lg-sprig:#A3896A;--lg-word:#C06B57;
+  color-scheme:light;
+}
+@media (min-width:768px){:root{--pad:40px;--hdr:78px}}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:var(--hdr)}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip;font-variant-numeric:lining-nums}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--bg)}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:var(--serif);font-weight:600;line-height:.98;letter-spacing:-.01em;text-wrap:balance}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+em{font-style:italic;font-weight:500}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding-left:max(var(--pad),env(safe-area-inset-left,0px));padding-right:max(var(--pad),env(safe-area-inset-right,0px))}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--ink);color:#fff;padding:10px 16px;border-radius:10px}
+.skip:focus{top:12px}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px;border-radius:8px}
+svg.i{width:1.15em;height:1.15em;flex:none;fill:currentColor}
+.eyebrow{font-size:13px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--rose)}
+.lead{font-size:18px;color:var(--ink-2);max-width:34em;font-weight:400}
+@media (min-width:900px){.lead{font-size:20px}}
+.stars{color:#D9A93F;letter-spacing:.08em}
+
+/* logo (owner's real wheat-stalk mark, coloured to the page) */
+.lg-s,.lg-w{display:block;flex:none;-webkit-mask-position:center;mask-position:center;-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.lg-s{background-color:var(--lg-sprig);-webkit-mask-image:url(assets/fc-sprig.png);mask-image:url(assets/fc-sprig.png);aspect-ratio:155/176}
+.lg-w{background-color:var(--lg-word);-webkit-mask-image:url(assets/fc-word.png);mask-image:url(assets/fc-word.png);aspect-ratio:628/60}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .lg-s{height:36px}.brand .lg-w{width:150px}
+@media (min-width:900px){.brand .lg-s{height:42px}.brand .lg-w{width:178px}}
+.flock{--lg-sprig:#E2D6BA;--lg-word:#E39A80;display:inline-flex;flex-direction:column;align-items:center;gap:12px;text-decoration:none}
+.flock .lg-s{height:56px}.flock .lg-w{width:190px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:50px;padding:0 24px;border-radius:999px;font-weight:500;font-size:16px;letter-spacing:.01em;text-decoration:none;border:0;cursor:pointer;font-family:var(--sans);transition:transform .35s var(--ease),background-color .25s,box-shadow .35s var(--ease);white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn.wa{background:var(--wa);color:#fff;box-shadow:0 10px 24px -12px rgba(21,117,64,.7)}
+.btn.wa:hover{background:var(--wa-d)}
+.btn.wine{background:var(--wine);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.light{background:#fff;color:var(--wine)}
+.btn.sm{min-height:42px;padding:0 18px;font-size:15px}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:30;padding-top:env(safe-area-inset-top,0px);transition:transform .5s var(--ease),background-color .35s,box-shadow .35s}
+.hdr .wrap{height:var(--hdr);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.hdr.solid{background:rgba(251,246,243,.86);-webkit-backdrop-filter:blur(14px) saturate(1.3);backdrop-filter:blur(14px) saturate(1.3);box-shadow:0 1px 0 var(--line)}
+.hdr.hide{transform:translateY(-100%)}
+.nav{display:none;gap:28px;font-weight:400;font-size:15px}
+.nav a{text-decoration:none;position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.nav a:hover::after{transform:scaleX(1)}
+@media (min-width:1000px){.nav{display:flex}}
+@media (max-width:420px){.hdr .btn.sm span{display:none}.hdr .btn.sm{padding:0 14px}}
+
+/* mobile order bar */
+.obar{position:fixed;left:0;right:0;bottom:0;z-index:29;display:flex;gap:10px;padding:10px max(14px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px));background:rgba(251,246,243,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 -1px 0 var(--line);transform:translateY(110%);transition:transform .55s var(--ease)}
+.obar .btn{flex:1;min-height:48px;padding:0 12px}
+html.past-hero .obar{transform:none}
+@media (min-width:900px){.obar{display:none}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:clip}
+.hero-pin{position:relative;height:100vh;height:100svh;overflow:visible;display:flex;flex-direction:column;padding-top:calc(var(--hdr) + env(safe-area-inset-top,0px))}
+.hero-bd{position:absolute;inset:0;opacity:0;pointer-events:none;background:radial-gradient(70% 60% at 50% 45%,#F7D9E1 0%,#F6E7EA 50%,var(--bg) 100%)}
+.hero-copy{position:relative;z-index:2;padding-top:10px}
+.hero h1{font-size:clamp(46px,12.5vw,118px);margin:12px 0 14px}
+.hero h1 em{color:var(--wine)}
+.hero .lead{font-size:17px}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.proof{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin-top:18px;font-size:15px;color:var(--ink-2)}
+.proof b{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--ink);line-height:1}
+.proof a{color:inherit;text-underline-offset:3px}
+.hero-stage{position:relative;z-index:1;flex:1;min-height:0;margin:16px 0 22px}
+.deal{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.card{margin:0;height:100%;max-height:540px;aspect-ratio:3/4;max-width:62vw;border-radius:var(--arch);overflow:hidden;background:#eee;box-shadow:0 30px 60px -28px rgba(43,34,48,.45),0 2px 6px rgba(43,34,48,.08);pointer-events:auto}
+.card img,.card video,.t-ph video,.biz-ph video,.bcard .ph video{width:100%;height:100%;object-fit:cover;display:block}
+.card.c2,.card.c3{height:80%}
+.card.big{position:absolute;z-index:2;max-width:none;max-height:none;aspect-ratio:auto;transform-origin:50% 50%}
+.hero-cap{position:absolute;z-index:3;left:0;right:0;bottom:calc(22px + env(safe-area-inset-bottom,0px));text-align:center;color:var(--ink);opacity:0;pointer-events:none}
+.hero-cap .k{font-size:13px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--rose)}
+.hero-cap .t{font-family:var(--serif);font-size:clamp(26px,4.4vw,40px);margin-top:4px}
+.scrollhint{position:absolute;z-index:3;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);display:none}
+@media (min-width:900px){
+  .hero-pin{flex-direction:row;align-items:center;gap:40px}
+  .hero-copy{flex:1.05;padding-top:0}
+  .hero-stage{flex:.95;align-self:stretch;margin:40px 0 50px}
+  .card{max-width:none}
+  .scrollhint{display:block}
+}
+@media (max-width:899px){
+  .hero .lead{display:none}
+  .hero h1{font-size:clamp(44px,13vw,68px)}
+  .proof{margin-top:14px;font-size:14px}
+  .proof .x{display:none}
+}
+@media (max-width:899px) and (min-height:760px){.hero .lead{display:block}}
+
+/* ---------- BESTSELLERS ---------- */
+.best{padding:96px 0 40px;overflow:hidden}
+.sec-head{display:grid;gap:14px;margin-bottom:30px}
+.sec-head h2{font-size:clamp(44px,8.6vw,92px)}
+.best-pin{position:relative}
+.rail{display:flex;gap:16px;padding-left:max(var(--pad),env(safe-area-inset-left,0px));padding-right:max(var(--pad),env(safe-area-inset-right,0px));overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:6px}
+.rail::-webkit-scrollbar{display:none}
+.bcard{flex:none;width:min(78vw,380px);scroll-snap-align:center;display:grid;gap:12px;text-decoration:none}
+.bcard .ph{position:relative;aspect-ratio:3/4;border-radius:var(--arch);overflow:hidden;background:#eee;box-shadow:0 24px 48px -30px rgba(43,34,48,.55)}
+.bcard .ph img,.bcard .ph video{position:absolute;left:-5%;top:0;width:110%;height:100%;object-fit:cover}
+.bcard .tag{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--rose)}
+.bcard h3{font-size:34px}
+.bcard p{color:var(--ink-2);font-size:16px}
+.bcard .go{font-weight:500;color:var(--wa);display:inline-flex;align-items:center;gap:6px}
+.swipe{font-size:13px;color:var(--muted);margin-top:12px;padding-left:max(var(--pad),env(safe-area-inset-left,0px))}
+.price{display:grid;gap:1px;background:var(--line);border-radius:22px;overflow:hidden;margin-top:36px}
+.price>div{background:var(--paper);padding:20px 22px;display:grid;gap:2px}
+.price b{font-family:var(--serif);font-size:32px;font-weight:600;line-height:1.05}
+.price span{color:var(--ink-2);font-size:15px}
+@media (min-width:900px){
+  .price{grid-template-columns:repeat(3,1fr)}
+  html.mo .best-pin{height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:center}
+  html.mo .rail{overflow:visible;scroll-snap-type:none;width:max-content;gap:26px}
+  html.mo .swipe{display:none}
+  .bcard{width:340px}
+}
+
+/* ---------- TYPES ---------- */
+.types{position:relative;background:var(--blush)}
+.types-pin{height:100vh;height:100svh;display:flex;flex-direction:column;padding-top:calc(var(--hdr) + 10px);padding-bottom:24px;gap:18px}
+.t-media{position:relative;flex:1;min-height:0;border-radius:var(--arch);overflow:hidden;background:#ddd}
+.t-ph{position:absolute;inset:0;margin:0;overflow:hidden}
+.t-ph img{width:100%;height:100%;object-fit:cover}
+.t-count{position:absolute;right:16px;bottom:16px;z-index:5;background:rgba(43,34,48,.72);color:#fff;font-size:12px;font-weight:500;letter-spacing:.12em;padding:6px 11px;border-radius:999px}
+.tlist{position:relative}
+.tlist li{display:grid;gap:8px}
+.tlist h3{font-size:clamp(40px,10vw,76px)}
+.tlist dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0;font-size:15px}
+.tlist dt{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);padding-top:3px}
+.tlist dd{margin:0;color:var(--ink-2)}
+.types .fine{font-size:13px;color:var(--muted);margin-top:14px}
+@media (max-width:899px){
+  .types-pin{height:auto}
+  html.mo .types-pin{height:100svh;padding-bottom:calc(86px + env(safe-area-inset-bottom,0px))}
+  html.mo .tlist{height:178px}
+  html.mo .tlist li{position:absolute;inset:0}
+  html.mo .types .fine{display:none}
+  html:not(.mo) .t-media{flex:none;aspect-ratio:4/5}
+  html:not(.mo) .tlist{display:grid;gap:26px}
+  .tlist h3{font-size:clamp(38px,11vw,52px)}
+}
+@media (min-width:900px){
+  .types-pin{flex-direction:row;align-items:center;gap:60px;padding-bottom:40px}
+  .t-media{flex:.9;align-self:stretch;max-width:520px}
+  .t-copy{flex:1.1}
+  .tlist{display:grid;gap:26px}
+  .tlist dl{font-size:16px}
+}
+html:not(.mo) .t-ph:not(:first-child){display:none}
+
+/* ---------- BUILDER ---------- */
+.build{padding:100px 0}
+.b-grid{display:grid;gap:30px;align-items:center}
+.b-card{justify-self:center;width:100%;max-width:440px;padding:34px 26px 30px;border-radius:var(--arch);background:var(--paper);box-shadow:0 30px 60px -36px rgba(43,34,48,.45),inset 0 0 0 1px var(--line);text-align:center;display:grid;gap:6px;justify-items:center}
+.b-dome{width:min(78%,300px);height:auto;overflow:visible;margin-bottom:12px;filter:drop-shadow(0 18px 24px rgba(43,34,48,.18))}
+.b-dome circle.r{transform-box:fill-box;transform-origin:center}
+.b-k{font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--rose)}
+.b-big{font-family:var(--serif);font-size:34px;line-height:1.05;font-weight:600}
+.b-col{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--wine)}
+.b-copy{display:grid;gap:18px}
+.b-copy h2{font-size:clamp(44px,8vw,84px)}
+.field{display:grid;gap:10px;border:0;margin:0;padding:0}
+.field legend{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:0;margin-bottom:10px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts button{min-height:44px;padding:0 16px;border-radius:999px;border:0;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);font:inherit;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:box-shadow .25s,background-color .25s,color .25s}
+.opts button i{width:16px;height:16px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.opts button[aria-pressed="true"]{background:var(--wine);color:#fff;box-shadow:none}
+.summary{font-family:var(--serif);font-size:26px;line-height:1.2;color:var(--wine)}
+.fine{font-size:13px;color:var(--muted)}
+@media (min-width:900px){.b-grid{grid-template-columns:.9fr 1.1fr;gap:72px}}
+
+/* ---------- HOW ---------- */
+.how{padding:30px 0 90px}
+.how h2{font-size:clamp(40px,7vw,72px);margin:12px 0 26px}
+.steps{display:grid;gap:12px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;padding:20px 22px;border-radius:20px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line)}
+.steps li::before{counter-increment:s;content:"0" counter(s);grid-row:span 2;font-family:var(--serif);font-size:34px;color:var(--rose);line-height:1}
+.steps b{font-weight:500;font-size:18px}
+.steps span{color:var(--ink-2);font-size:15px}
+@media (min-width:900px){.steps{grid-template-columns:repeat(4,1fr)}.steps li{grid-template-columns:1fr}.steps li::before{grid-row:auto}}
+.where{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:15px;color:var(--ink-2)}
+
+/* ---------- REVIEWS ---------- */
+.reviews{padding:90px 0;background:var(--paper);overflow:hidden}
+.rv-head{display:grid;gap:12px;margin-bottom:34px}
+.rv-head h2{font-size:clamp(40px,7vw,76px)}
+.score{display:flex;align-items:center;flex-wrap:wrap;gap:6px 14px;font-size:15px;color:var(--ink-2)}
+.score b{font-family:var(--serif);font-size:44px;color:var(--ink);line-height:1}
+.rrow{display:flex;gap:14px;width:max-content;margin-bottom:14px}
+.rv{margin:0;width:min(82vw,360px);flex:none;padding:22px;border-radius:22px;background:var(--bg);box-shadow:inset 0 0 0 1px var(--line);display:grid;gap:10px;align-content:start}
+.rv blockquote{margin:0;font-family:var(--serif);font-size:22px;line-height:1.25;color:var(--ink)}
+.rv figcaption{font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.rv-foot{margin-top:24px;font-size:13px;color:var(--muted)}
+html:not(.mo) .rrow{width:auto;overflow-x:auto;scroll-snap-type:x mandatory;padding-left:max(var(--pad),env(safe-area-inset-left,0px));padding-right:max(var(--pad),env(safe-area-inset-right,0px));scrollbar-width:none}
+html:not(.mo) .rv{scroll-snap-align:start}
+
+/* ---------- BUSINESS ---------- */
+.biz{background:var(--wine);color:#fff;padding:100px 0;position:relative;overflow:hidden}
+.biz .eyebrow{color:#F3B9CF}
+.biz h2{font-size:clamp(42px,7.4vw,84px);margin:14px 0 18px}
+.biz .lead{color:rgba(255,255,255,.85)}
+.biz-grid{display:grid;gap:34px;align-items:center}
+.biz-ph{margin:0;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;position:relative}
+.biz-ph img{width:100%;height:100%;object-fit:cover}
+.blist{display:grid;gap:1px;background:rgba(255,255,255,.16);border-radius:20px;overflow:hidden;margin:24px 0}
+.blist li{background:var(--wine);padding:16px 20px;display:grid;gap:2px}
+.blist b{font-weight:500}
+.blist span{font-size:15px;opacity:.8}
+.note-chip{display:inline-block;font-size:14px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.12);margin-bottom:6px}
+@media (min-width:900px){.biz-grid{grid-template-columns:1.1fr .9fr;gap:72px}}
+
+/* ---------- END ---------- */
+.end{background:var(--wine-d);color:#fff;text-align:center;padding:110px 0 70px}
+.end h2{font-size:clamp(46px,9vw,110px);margin:18px 0 18px}
+.end h2 em{color:#F3B9CF}
+.end p{opacity:.85;max-width:30em;margin:0 auto}
+.end .ctas{justify-content:center;margin-top:28px}
+footer{background:var(--wine-d);color:rgba(255,255,255,.72);font-size:14px;padding:0 0 calc(30px + env(safe-area-inset-bottom,0px))}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;border-top:1px solid rgba(255,255,255,.14);padding-top:26px}
+@media (max-width:899px){footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}}
+
+html.mo [data-rv]{opacity:0;transform:translateY(28px)}
+@media (prefers-reduced-motion:reduce){html.mo [data-rv]{opacity:1;transform:none}}
+.t-ph img,.t-ph video{position:absolute;left:0;top:-3%;width:100%;height:110%;object-fit:cover}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M7 7V6a5 5 0 0 1 10 0v1h3l-1 15H5L4 7h3zm2 0h6V6a3 3 0 0 0-6 0v1z"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Floral Charm, back to top"><i class="lg-s" aria-hidden="true"></i><i class="lg-w" aria-hidden="true"></i></a>
+    <nav class="nav" aria-label="Main"><a href="#best">Bestsellers</a><a href="#types">Flower types</a><a href="#build">Build yours</a><a href="#reviews">Reviews</a><a href="#business">For business</a></nav>
+    <a class="btn wa sm" href="https://wa.me/6584941446?text=Hi%20Floral%20Charm!%20I'd%20like%20to%20order%20a%20bouquet." target="_blank" rel="noopener" aria-label="Order on WhatsApp"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+  </div>
+</header>
+
+<main id="main">
+<!-- 1 · HERO: real bouquets deal in, then the arch grows to centre stage -->
+<section class="hero" id="top" aria-label="Floral Charm">
+  <div class="hero-bd" id="heroBd" aria-hidden="true"></div>
+  <div class="hero-pin wrap" id="heroPin">
+    <div class="hero-copy" id="heroCopy">
+      <p class="eyebrow">Handmade in Singapore</p>
+      <h1>Flowers that say it, <em>and stay.</em></h1>
+      <p class="lead">Preserved, soap and fresh-flower bouquets, handmade to order in our Geylang Bahru studio. Need it today? Urgent orders can reach you within 2 hours.</p>
+      <div class="ctas">
+        <a class="btn wa" href="https://wa.me/6584941446?text=Hi%20Floral%20Charm!%20I'd%20like%20to%20order%20a%20bouquet." target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>Order on WhatsApp</a>
+        <a class="btn ghost" href="#best">See bestsellers</a>
+      </div>
+      <p class="proof"><b>4.92</b><span class="stars" aria-label="5 stars">★★★★★</span><a href="https://www.carousell.sg/u/floralcharm/?tab=reviews" target="_blank" rel="noopener">377 Carousell reviews</a><span class="x">· Urgent delivery within 2 hours</span></p>
+    </div>
+    <div class="hero-stage" id="heroStage">
+      <div class="deal"><figure class="card c2"><img src="assets/fc-product-4.jpg" alt="A yellow and purple bouquet in our studio" width="1080" height="1440"></figure></div>
+      <div class="deal"><figure class="card c3"><img src="assets/fc-gallery-3.jpg" alt="A mint-green rose dome in a white wrap" width="1080" height="1064"></figure></div>
+      <div class="deal"><figure class="card c1" id="heroFrame"><video data-v src="assets/v-pink-dome.mp4" poster="assets/v-pink-dome.jpg" muted playsinline loop autoplay preload="auto" aria-label="A grand dome of pink roses in a layered white wrap, in our studio"></video></figure></div>
+    </div>
+    <div class="hero-cap" id="heroCap" aria-hidden="true"><p class="k">Grand pink rose dome</p><p class="t">Made by hand, to order, in Geylang Bahru.</p></div>
+    <p class="scrollhint" id="hint">Scroll</p>
+  </div>
+</section>
+
+<!-- 2 · BESTSELLERS: desktop slides sideways with scroll; phones swipe -->
+<section class="best" id="best" aria-labelledby="best-h">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="eyebrow" data-rv>Bestsellers</p>
+      <h2 id="best-h" data-rv>Made by hand, <em>loved on repeat.</em></h2>
+      <p class="lead" data-rv>Every bouquet is made to order, so any of these can change colour, size or flowers to suit.</p>
+    </header>
+  </div>
+  <div class="best-pin" id="bestPin">
+    <div class="rail" id="bRail">
+      <a class="bcard" href="https://wa.me/6584941446?text=Hi%20Floral%20Charm!%20I'm%20interested%20in%20the%20Garden%20mix%20bouquet." target="_blank" rel="noopener"><div class="ph"><video data-v src="assets/v-lily-garden.mp4" poster="assets/v-lily-garden.jpg" muted playsinline loop preload="none" aria-label="A bouquet of lilies, gerbera and roses in a cream wrap"></video></div><p class="tag">Fresh flowers · Birthday</p><h3>Garden mix</h3><p>Lilies, gerbera and roses in a soft cream wrap.</p><span class="go"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>Ask about this one</span></a>
+      <a class="bcard" href="https://wa.me/6584941446?text=Hi%20Floral%20Charm!%20I'm%20interested%20in%20the%20Lilac%20dream%20bouquet." target="_blank" rel="noopener"><div class="ph"><img src="assets/fc-product-3.jpg" alt="Lilac and lavender rose bouquet" loading="lazy" decoding="async" style="object-position:50% 70%"></div><p class="tag">Birthday · Just because</p><h3>Lilac dream</h3><p>Lilac and lavender roses with soft feathered fronds.</p><span class="go"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>Ask about this one</span></a>
+      <a class="bcard" href="https://wa.me/6584941446?text=Hi%20Floral%20Charm!%20I'm%20interested%20in%20the%20Grand%20lilac%20%26%20butter%20bouquet." target="_blank" rel="noopener"><div class="ph"><img src="assets/fc-gallery-9.jpg" alt="Dome of lilac and butter-yellow soap roses" loading="lazy" decoding="async"></div><p class="tag">Soap roses · Proposal</p><h3>Lilac &amp; butter</h3><p>A statement dome of lilac and butter-yellow soap roses.</p><span class="go"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>Ask about this one</span></a>
+      <a class="bcard" href="https://wa.me/6584941446?text=Hi%20Floral%20Charm!%20I'm%20interested%20in%20the%20Midnight%20blue%20bouquet." target="_blank" rel="noopener"><div class="ph"><img src="assets/fc-gallery-11.jpg" alt="Blue-black soap rose bouquet in black wrap" loading="lazy" decoding="async" style="object-position:50% 45%"></div><p class="tag">Soap roses · For him</p><h3>Midnight blue</h3><p>Blue-black roses with white fluffy accents.</p><span class="go"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>Ask about this one</span></a>
+      <a class="bcard" href="https://wa.me/6584941446?text=Hi%20Floral%20Charm!%20I'm%20interested%20in%20the%20Sunshine%20yellow%20bouquet." target="_blank" rel="noopener"><div class="ph"><img src="assets/fc-gallery-7.jpg" alt="Grand dome of yellow soap roses" loading="lazy" decoding="async" style="object-position:50% 75%"></div><p class="tag">Soap roses · Birthday</p><h3>Sunshine yellow</h3><p>A grand dome of yellow roses for big birthdays.</p><span class="go"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>Ask about this one</span></a>
+      <a class="bcard" href="https://wa.me/6584941446?text=Hi%20Floral%20Charm!%20I'm%20interested%20in%20the%20Sky%20blue%20bouquet." target="_blank" rel="noopener"><div class="ph"><img src="assets/fc-gallery-4.jpg" alt="Sky-blue soap rose bouquet in white wrap" loading="lazy" decoding="async"></div><p class="tag">Soap roses · Graduation</p><h3>Sky blue</h3><p>Soft blue roses in layered white wrap and ribbon.</p><span class="go"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>Ask about this one</span></a>
+    </div>
+    <p class="swipe" aria-hidden="true">Swipe for more →</p>
+  </div>
+  <div class="wrap">
+    <div class="price" data-rv>
+      <div><b>From S$32</b><span>Posies and small bouquets</span></div>
+      <div><b>S$58 – 148</b><span>Most of our bouquets and gift boxes</span></div>
+      <div><b>Grand &amp; custom</b><span>Statement pieces, quoted to your design</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · FLOWER TYPES: three photos wipe in, one per type -->
+<section class="types" id="types" aria-labelledby="types-h">
+  <div class="types-pin wrap" id="typesPin">
+    <div class="t-media">
+      <figure class="t-ph"><img src="assets/fc-product-1.jpg" alt="Red rose bouquet with dried accents" loading="lazy" decoding="async" style="object-position:50% 60%"></figure>
+      <figure class="t-ph"><img src="assets/fc-gallery-8.jpg" alt="Dome of soap roses in grey wrap" loading="lazy" decoding="async"></figure>
+      <figure class="t-ph"><video data-v src="assets/v-fresh-fridge.mp4" poster="assets/v-fresh-fridge.jpg" muted playsinline loop preload="none" aria-label="Fresh roses and sunflowers in our flower chiller"></video></figure>
+      <span class="t-count" id="tCount" aria-hidden="true">01 / 03</span>
+    </div>
+    <div class="t-copy">
+      <p class="eyebrow" id="types-h" style="margin-bottom:12px">Preserved, soap or fresh?</p>
+      <ol class="tlist" id="tlist">
+        <li><h3>Preserved.</h3><dl><dt>Lasts</dt><dd>Many months, often a year or more indoors</dd><dt>Water</dt><dd>None</dd><dt>Best for</dt><dd>Anniversaries, keepsakes</dd></dl></li>
+        <li><h3>Soap.</h3><dl><dt>Lasts</dt><dd>Many months, kept dry</dd><dt>Feel</dt><dd>Velvety, rich colour, light scent</dd><dt>Best for</dt><dd>Big statement bouquets, gifts</dd></dl></li>
+        <li><h3>Fresh.</h3><dl><dt>Lasts</dt><dd>About a week</dd><dt>Water</dt><dd>Fresh water every day or two</dd><dt>Best for</dt><dd>Birthdays, events, same-day</dd></dl></li>
+      </ol>
+      <p class="fine">Photos show recent pieces from our studio. Soap flowers are decorative, not for washing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · BUILD YOURS: pick a colour and a real bouquet in that colour appears -->
+<section class="build" id="build" aria-labelledby="build-h">
+  <div class="wrap b-grid">
+    <div class="b-card" data-rv aria-hidden="true">
+      <svg class="b-dome" id="bDome" viewBox="-110 -110 220 220"><defs><radialGradient id="bWrap" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F3E9E4"/></radialGradient></defs><circle r="104" fill="url(#bWrap)"/><g id="bRoses"></g></svg>
+      <p class="b-k">Your bouquet</p>
+      <p class="b-big" id="bBig">11 preserved roses</p>
+      <p class="b-col" id="bCol">in ruby red</p>
+    </div>
+    <div class="b-copy">
+      <p class="eyebrow" data-rv>Build yours</p>
+      <h2 id="build-h" data-rv>Make it <em>yours.</em></h2>
+      <p class="lead" data-rv>Pick a colour, a flower type and a size. We send the final design and price, then you pay to lock in your date.</p>
+      <fieldset class="field" data-rv><legend>Colour</legend><div class="opts" id="oCol">
+        <button type="button" data-v="red" aria-pressed="true" style="--c:#A5162F"><i></i>Ruby red</button>
+        <button type="button" data-v="lilac" aria-pressed="false" style="--c:#A996E0"><i></i>Lilac</button>
+        <button type="button" data-v="pink" aria-pressed="false" style="--c:#F1B6C6"><i></i>Blush pink</button>
+        <button type="button" data-v="blue" aria-pressed="false" style="--c:#8FB3E0"><i></i>Sky blue</button>
+        <button type="button" data-v="yellow" aria-pressed="false" style="--c:#F6CB34"><i></i>Sunshine</button>
+        <button type="button" data-v="midnight" aria-pressed="false" style="--c:#2C4596"><i></i>Midnight</button>
+      </div></fieldset>
+      <fieldset class="field" data-rv><legend>Flowers</legend><div class="opts" id="oType">
+        <button type="button" data-v="Preserved" aria-pressed="true">Preserved</button>
+        <button type="button" data-v="Soap" aria-pressed="false">Soap</button>
+        <button type="button" data-v="Fresh" aria-pressed="false">Fresh</button>
+      </div></fieldset>
+      <fieldset class="field" data-rv><legend>Size</legend><div class="opts" id="oSize">
+        <button type="button" data-v="11" aria-pressed="true">11 roses</button>
+        <button type="button" data-v="52" aria-pressed="false">52 roses</button>
+        <button type="button" data-v="99" aria-pressed="false">99 roses</button>
+      </div></fieldset>
+      <p class="summary" id="sum" aria-live="polite">11 preserved roses in ruby red.</p>
+      <div data-rv><a class="btn wa" id="bGo" href="https://wa.me/6584941446" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>Send this on WhatsApp</a></div>
+      <p class="fine" data-rv>Posies from S$32. Most bouquets S$58–148. Grand pieces quoted to your design.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · HOW TO ORDER -->
+<section class="how" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <p class="eyebrow" data-rv>How ordering works</p>
+    <h2 id="how-h" data-rv>Four messages to <em>beautiful.</em></h2>
+    <ol class="steps">
+      <li data-rv><b>Pick a look</b><span>Choose a bestseller, or send us a photo, a colour or just a vibe.</span></li>
+      <li data-rv><b>WhatsApp us</b><span>Share the date, delivery address, budget and your card message.</span></li>
+      <li data-rv><b>Confirm</b><span>We send the final design and price. Pay to lock in your date.</span></li>
+      <li data-rv><b>Delivered</b><span>Anywhere in Singapore, within 2 hours for urgent orders. Or self-collect in Geylang Bahru.</span></li>
+    </ol>
+    <p class="where" data-rv><span>Studio: Geylang Bahru, Singapore 330068</span><span>WhatsApp +65 8494 1446</span><span>Many items come with free delivery</span></p>
+  </div>
+</section>
+
+<!-- 6 · REVIEWS: real Carousell reviews drift past as you scroll -->
+<section class="reviews" id="reviews" aria-labelledby="rv-h">
+  <div class="wrap rv-head">
+    <p class="eyebrow" data-rv>Reviews</p>
+    <h2 id="rv-h" data-rv>Kind words from <em>real buyers.</em></h2>
+    <p class="score" data-rv><b>4.92</b><span class="stars" aria-hidden="true">★★★★★</span><span>377 reviews · 9 years on Carousell</span></p>
+  </div>
+  <div class="rrow" id="rr1"></div>
+  <div class="rrow" id="rr2"></div>
+  <div class="wrap rv-foot">Quoted from our Carousell reviews, as written. Names shortened for privacy. Collected November 2026. <a href="https://www.carousell.sg/u/floralcharm/?tab=reviews" target="_blank" rel="noopener">Read all 377 on Carousell →</a></div>
+</section>
+
+<!-- 7 · BUSINESS -->
+<section class="biz" id="business" aria-labelledby="biz-h">
+  <div class="wrap biz-grid">
+    <div>
+      <p class="eyebrow" data-rv>Corporate &amp; events</p>
+      <h2 id="biz-h" data-rv>Florals for displays, lobbies and big days.</h2>
+      <p class="lead" data-rv>One-off pieces, weekly reception flowers and full event set-ups, made by hand in our own studio and delivered and set up across Singapore.</p>
+      <p class="note-chip" data-rv>Now supplying florals for a leading Orchard Road department store's Christmas event.</p>
+      <ul class="blist" data-rv>
+        <li><b>Retail &amp; mall displays</b><span>Window, counter and atrium florals, changed with the season.</span></li>
+        <li><b>Corporate events</b><span>Welcome displays, centrepieces and photo-op florals.</span></li>
+        <li><b>Hotel &amp; office reception</b><span>Fresh weekly, or preserved pieces swapped monthly.</span></li>
+        <li><b>Wedding-setup partners</b><span>We make the florals for your set-ups, unbranded on site.</span></li>
+      </ul>
+      <div data-rv><a class="btn light" href="https://wa.me/6584941446?text=Hi%20Floral%20Charm!%20Business%20enquiry.%20Company%3A%20%20What%20we%20need%3A%20%20Date%3A%20" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>Send a business brief</a></div>
+      <p class="fine" style="color:rgba(255,255,255,.7);margin-top:14px" data-rv>Quote in 1 working day, with options at 2–3 price points. One monthly invoice for repeat accounts.</p>
+    </div>
+    <figure class="biz-ph" id="bizPh"><img src="assets/fc-product-5.jpg" alt="A pink bouquet in the Floral Charm studio" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<section class="end" aria-labelledby="end-h">
+  <div class="wrap">
+    <a class="flock" href="#top" aria-label="Floral Charm, back to top"><i class="lg-s" aria-hidden="true"></i><i class="lg-w" aria-hidden="true"></i></a>
+    <h2 id="end-h" data-rv>Someone deserves <em>flowers today.</em></h2>
+    <p data-rv>Tell us who they're for and when. We'll take care of the rest, beautifully.</p>
+    <div class="ctas" data-rv>
+      <a class="btn wa" href="https://wa.me/6584941446?text=Hi%20Floral%20Charm!%20I'd%20like%20to%20order%20a%20bouquet." target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>Order on WhatsApp</a>
+      <a class="btn light" href="https://www.carousell.sg/u/floralcharm/" target="_blank" rel="noopener">Shop on Carousell</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Floral Charm · Singapore · A Born Juicy family brand</span>
+    <span>WhatsApp +65 8494 1446 · contact@bornjuicy.sg</span>
+  </div>
+</footer>
+
+<div class="obar" id="obar">
+  <a class="btn wa" href="https://wa.me/6584941446?text=Hi%20Floral%20Charm!%20I'd%20like%20to%20order%20a%20bouquet." target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>Order</a>
+  <a class="btn wine" href="#build">Build a bouquet</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script>
+(function(){
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+
+  /* real Carousell reviews (collected 6 Nov 2026), names masked */
+  var R=[
+    {w:'kmsn50',d:'Oct 2026',t:'Simply awesome seller, appreciate their kind assist and very thankful for their services... definitely will get more when occasion comes ;)',p:'Soap rose bouquet'},
+    {w:'.jxr.',d:'Oct 2026',t:'Expert flower bouquet maker, would definitely purchase again!',p:'Black soap rose bouquet'},
+    {w:'homious69',d:'Aug 2026',t:'I love the 999 flower and the owner is very good, gave some freebies. Highly recommended!',p:'999-rose engagement bouquet'},
+    {w:'youdontevenneedtoknow',d:'May 2026',t:'Seller was patient with my enquiries regarding the bouquet. The flowers were lovely and my mom loved it. Thank you!',p:'Pink soap rose bouquet'},
+    {w:'sxphhh',d:'Apr 2026',t:'Decided to get my BF flowers for his birthday because why not. Boss lady was very quick to respond and have my order ready! Really friendly and the flowers are beautiful.',p:'Black soap rose bouquet'},
+    {w:'_tflores_',d:'Apr 2026',t:'Fast replies & was able to provide information as well as photos! They were able to help us print a card as well! Will recommend!!'},
+    {w:'krumbs.',d:'Feb 2026',t:'Seller with fast replies, great service and nice flowers! Thanks for accommodating my last-minute requests! Will definitely purchase from seller again!'},
+    {w:'moeht',d:'Aug 2026',t:'Great seller! Very prompt and genuine, would buy from them again!',p:"11 soap roses with baby's breath"},
+    {w:'hariv_11',d:'Feb 2026',t:'Very fast to respond. Flowers look beautiful! Would definitely buy more flowers from them in the future!',p:"11 soap roses with baby's breath"},
+    {w:'petertay',d:'Feb 2026',t:'Seller was very helpful and replied very quickly. Gave me plenty of options to choose from.',p:'52 red soap roses, 5 layers'}
+  ];
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function mask(n){var s=String(n).replace(/[^A-Za-z0-9]/g,'');return s.length<2?'C***':s[0]+'***'+s[s.length-1]}
+  function card(r){return '<figure class="rv"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“'+esc(r.t)+'”</blockquote><figcaption><span>'+esc(mask(r.w))+' · '+esc(r.d)+'</span>'+(r.p?'<span>'+esc(r.p)+'</span>':'')+'</figcaption></figure>'}
+  document.getElementById('rr1').innerHTML=R.slice(0,5).map(card).join('');
+  document.getElementById('rr2').innerHTML=R.slice(5).map(card).join('');
+
+  /* builder: colour swaps in a real bouquet photo; message goes to WhatsApp */
+  var names={red:'ruby red',lilac:'lilac',pink:'blush pink',blue:'sky blue',yellow:'sunshine yellow',midnight:'midnight blue'};
+  var st={c:'red',t:'Preserved',s:'11'};
+  function pick(id,key){var g=document.getElementById(id);g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});st[key]=b.dataset.v;upd()})}
+  /* the dome draws your rose count in your colour (golden-angle spiral), so you see the size change */
+  var PAL={red:['#8E0F26','#A5162F','#C8243C','#76091D'],lilac:['#B6A1E6','#9C88DA','#D3C5F3','#C4B2EC'],pink:['#F1B6C6','#E89AAF','#F7CCD7','#E27F9A'],blue:['#8FB3E0','#A9C6EA','#7AA1D6','#C3D8F1'],yellow:['#F6CB34','#F9DA62','#F0B91C','#FBE38E'],midnight:['#2C4596','#22357A','#3A57B0','#4A66BF']};
+  var NS='http://www.w3.org/2000/svg', lastN=0;
+  function dome(){
+    var g=document.getElementById('bRoses'), n=+st.s, pal=PAL[st.c], R0=88, c=R0/Math.sqrt(n), rr=c*.62, grow=n!==lastN;
+    while(g.firstChild) g.removeChild(g.firstChild);
+    for(var i=0;i<n;i++){
+      var a=i*2.39996, rad=c*Math.sqrt(i+.5), x=Math.cos(a)*rad, y=Math.sin(a)*rad;
+      var e=document.createElementNS(NS,'circle'); e.setAttribute('class','r'); e.setAttribute('cx',x.toFixed(2)); e.setAttribute('cy',y.toFixed(2)); e.setAttribute('r',rr.toFixed(2));
+      e.setAttribute('fill',pal[(i*7)%pal.length]);
+      if(st.t==='Soap'){e.setAttribute('stroke','rgba(255,255,255,.55)');e.setAttribute('stroke-width',(rr*.18).toFixed(2))}
+      if(st.t==='Fresh'&&i%5===4){e.setAttribute('fill','#6E9B4E')}
+      if(grow&&window.gsap&&!matchMedia('(prefers-reduced-motion: reduce)').matches){gsap.from(e,{scale:0,duration:.6,ease:'back.out(2)',delay:i*(0.5/n)})}
+      g.appendChild(e);
+    }
+    lastN=n;
+  }
+  function upd(){
+    var txt=st.s+' '+st.t.toLowerCase()+' roses in '+names[st.c]+'.';
+    document.getElementById('sum').textContent=txt.charAt(0).toUpperCase()+txt.slice(1);
+    document.getElementById('bBig').textContent=st.s+' '+st.t.toLowerCase()+' roses';
+    document.getElementById('bCol').textContent='in '+names[st.c];
+    dome();
+    document.getElementById('bGo').href='https://wa.me/6584941446?text='+encodeURIComponent("Hi Floral Charm! I'd like a bouquet: "+st.s+' '+st.t.toLowerCase()+' roses in '+names[st.c]+'. Date needed: ');
+  }
+  pick('oCol','c');pick('oType','t');pick('oSize','s');upd();
+})();
+
+
+/* real product loops: play only while on screen; if the phone blocks autoplay (Low Power Mode) the poster stays */
+(function(){
+  var vids=[].slice.call(document.querySelectorAll('video[data-v]'));
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  vids.forEach(function(v){v.muted=true;v.setAttribute('muted','');v.playsInline=true;if(reduce){v.removeAttribute('autoplay');v.autoplay=false}});
+  if(reduce) return;
+  function play(v){var p=v.play();if(p&&p.catch)p.catch(function(){v.removeAttribute('autoplay')})}
+  if(!('IntersectionObserver' in window)){vids.forEach(play);return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){if(v.preload==='none')v.preload='auto';play(v)}else v.pause()})},{rootMargin:'200px 0px'});
+  vids.forEach(function(v){io.observe(v)});
+})();
+
+window.addEventListener('DOMContentLoaded',function(){
+  var q=location.search, flat=/flat/.test(q), shot=/shot/.test(q);
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hdr=document.getElementById('hdr'), root=document.documentElement;
+  function onScrollBasic(){var y=scrollY;hdr.classList.toggle('solid',y>10);root.classList.toggle('past-hero',y>innerHeight*.9)}
+  addEventListener('scroll',onScrollBasic,{passive:true});onScrollBasic();
+  if(flat||reduce||!window.gsap||!window.ScrollTrigger) return;
+  root.classList.add('mo');
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ignoreMobileResize:true});
+  var touch=matchMedia('(pointer: coarse)').matches, SCRUB=touch?0.6:true;
+
+  var lenis=null;
+  if(!touch&&!shot&&window.Lenis){
+    lenis=new Lenis({lerp:.1,smoothWheel:true});
+    lenis.on('scroll',ScrollTrigger.update);
+    gsap.ticker.add(function(t){lenis.raf(t*1000)});
+    gsap.ticker.lagSmoothing(0);
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=document.querySelector(id);if(!t)return;e.preventDefault();lenis.scrollTo(id==='#top'?0:t,{offset:-parseInt(getComputedStyle(root).getPropertyValue('--hdr'))||0,duration:1.4})})});
+  }
+  ScrollTrigger.create({start:0,end:'max',onUpdate:function(s){hdr.classList.toggle('hide',s.direction===1&&s.scroll()>innerHeight*.6)}});
+
+  /* ---------- 1 · HERO ---------- */
+  var pin=document.getElementById('heroPin'), frame=document.getElementById('heroFrame');
+  var c2=pin.querySelector('.c2'), c3=pin.querySelector('.c3'), deals=pin.querySelectorAll('.deal');
+  var mm=gsap.matchMedia();
+  mm.add({d:'(min-width: 900px)',m:'(max-width: 899px)'},function(ctx){
+    var d=ctx.conditions.d;
+    gsap.set(c2,{xPercent:d?-36:-30,yPercent:4,rotation:-7});
+    gsap.set(c3,{xPercent:d?36:30,yPercent:7,rotation:6});
+    /* the real frame moves out of the stage and is laid out at its largest size; an empty twin keeps the slot */
+    var slot=frame.cloneNode(false); slot.removeAttribute('id'); slot.style.visibility='hidden'; slot.setAttribute('aria-hidden','true');
+    frame.parentNode.insertBefore(slot,frame); pin.appendChild(frame); frame.classList.add('big');
+    function off(el){var x=0,y=0;while(el&&el!==pin){x+=el.offsetLeft;y+=el.offsetTop;el=el.offsetParent}return{x:x,y:y}}
+    var T={};
+    function layout(){
+      var W=pin.clientWidth,H=pin.clientHeight,hd=hdr.offsetHeight;
+      var th=Math.min((H-hd)*(d?.70:.74),(W*.86)/0.75), tw=th*0.75;
+      var L=(W-tw)/2, Tp=hd+(H-hd-th)/2-(d?26:20);
+      gsap.set(frame,{width:tw,height:th,left:L,top:Tp});
+      var o=off(slot),w=slot.offsetWidth,h=slot.offsetHeight;
+      T={x:(o.x+w/2)-(L+tw/2), y:(o.y+h/2)-(Tp+th/2), s:w/tw};
+    }
+    layout();
+    gsap.set(frame,{x:T.x,y:T.y,scale:T.s});
+    gsap.from(deals,{y:90,autoAlpha:0,duration:1.4,ease:'expo.out',stagger:.12,delay:.15});
+    gsap.from(frame,{autoAlpha:0,duration:1.2,ease:'power2.out',delay:.4});
+    gsap.from('#heroCopy > *',{y:30,autoAlpha:0,duration:1.1,ease:'expo.out',stagger:.08,delay:.05});
+    var tl=gsap.timeline({defaults:{ease:'none'},scrollTrigger:{trigger:'#top',start:'top top',end:'+='+(d?100:70)+'%',pin:'#top',scrub:SCRUB,anticipatePin:1,invalidateOnRefresh:true,onRefreshInit:function(){gsap.set(frame,{x:0,y:0,scale:1});layout()}}});
+    tl.to('#heroCopy',{y:-70,autoAlpha:0,duration:.45,ease:'power2.in'},0)
+      .to('#hint',{autoAlpha:0,duration:.15},0)
+      .to(c2,{xPercent:-150,yPercent:20,rotation:-22,autoAlpha:0,duration:.6,ease:'power2.in'},0.02)
+      .to(c3,{xPercent:150,yPercent:24,rotation:20,autoAlpha:0,duration:.6,ease:'power2.in'},0.02)
+      .fromTo(frame,{x:function(){return T.x},y:function(){return T.y},scale:function(){return T.s}},{x:0,y:0,scale:1,duration:1,ease:'power2.inOut'},0)
+      .to('#heroBd',{autoAlpha:1,duration:.7,ease:'power1.inOut'},.25)
+      .to('#heroCap',{autoAlpha:1,y:0,duration:.35},.8)
+      .to({},{duration:.25});
+    gsap.set('#heroCap',{y:16});
+    return function(){gsap.set(frame,{clearProps:'all'});frame.classList.remove('big');slot.parentNode.insertBefore(frame,slot);slot.remove()};
+  });
+
+  /* ---------- 2 · BESTSELLERS: sideways with scroll on desktop only ---------- */
+  var rail=document.getElementById('bRail');
+  mm.add('(min-width: 900px)',function(){
+    function dist(){return Math.max(0,rail.scrollWidth-innerWidth)}
+    gsap.to(rail,{x:function(){return -dist()},ease:'none',scrollTrigger:{trigger:'#bestPin',start:'top top',end:function(){return '+='+dist()},pin:true,scrub:SCRUB,anticipatePin:1,invalidateOnRefresh:true}});
+    rail.querySelectorAll('.ph img').forEach(function(img){
+      gsap.fromTo(img,{xPercent:4},{xPercent:-4,ease:'none',scrollTrigger:{trigger:'#bestPin',start:'top top',end:function(){return '+='+dist()},scrub:SCRUB,invalidateOnRefresh:true}});
+    });
+  });
+
+  /* ---------- 3 · TYPES ---------- */
+  var phs=gsap.utils.toArray('.t-ph'), lis=gsap.utils.toArray('#tlist li'), cnt=document.getElementById('tCount');
+  mm.add({d:'(min-width: 900px)',m:'(max-width: 899px)'},function(ctx){
+    var d=ctx.conditions.d, dim=d?.22:0;
+    gsap.set(phs.slice(1),{clipPath:'inset(100% 0% 0% 0%)'});
+    gsap.set(lis.slice(1),{autoAlpha:dim,y:d?0:24});
+    gsap.set(lis[0],{autoAlpha:1});
+    var tl=gsap.timeline({defaults:{ease:'none'},scrollTrigger:{trigger:'#typesPin',start:'top top',end:'+=220%',pin:true,scrub:SCRUB,anticipatePin:1,
+      onUpdate:function(s){var i=Math.min(2,Math.floor(s.progress*2.999));cnt.textContent='0'+(i+1)+' / 03'}}});
+    tl.fromTo(phs[0].querySelector('img,video'),{yPercent:0},{yPercent:-4,duration:2.2},0);
+    [1,2].forEach(function(i){
+      var at=(i-1)+.4;
+      tl.to(phs[i],{clipPath:'inset(0% 0% 0% 0%)',duration:.6,ease:'power2.inOut'},at)
+        .fromTo(phs[i].querySelector('img,video'),{yPercent:6},{yPercent:0,duration:1.4,ease:'power1.out'},at)
+        .to(lis[i-1],{autoAlpha:dim,y:d?0:-24,duration:.3},at+.1)
+        .to(lis[i],{autoAlpha:1,y:0,duration:.3},at+.25);
+    });
+  });
+
+  /* ---------- 6 · REVIEWS drift opposite ways ---------- */
+  gsap.fromTo('#rr1',{x:0},{x:function(){return -Math.max(0,document.getElementById('rr1').scrollWidth-innerWidth)*.6},ease:'none',scrollTrigger:{trigger:'#reviews',start:'top bottom',end:'bottom top',scrub:SCRUB,invalidateOnRefresh:true}});
+  gsap.fromTo('#rr2',{x:function(){return -Math.max(0,document.getElementById('rr2').scrollWidth-innerWidth)*.6}},{x:0,ease:'none',scrollTrigger:{trigger:'#reviews',start:'top bottom',end:'bottom top',scrub:SCRUB,invalidateOnRefresh:true}});
+
+  /* ---------- 7 · business photo opens like a window ---------- */
+  gsap.timeline({scrollTrigger:{trigger:'#bizPh',start:'top 92%',end:'center 55%',scrub:SCRUB}})
+    .fromTo('#bizPh',{clipPath:'inset(14% 10% 14% 10% round 26px)'},{clipPath:'inset(0% 0% 0% 0% round 26px)',ease:'power2.out'},0);
+
+  ScrollTrigger.batch('[data-rv]',{start:'top 88%',once:true,onEnter:function(els){gsap.to(els,{autoAlpha:1,y:0,duration:1,ease:'expo.out',stagger:.07,overwrite:true})}});
+  addEventListener('load',function(){ScrollTrigger.refresh()});
+  window.STORY={update:function(){ScrollTrigger.update()}};
+});
+</script>
+</body>
+</html>
